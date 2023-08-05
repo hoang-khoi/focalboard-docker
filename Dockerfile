@@ -7,8 +7,8 @@ RUN apt-get install -y make golang git npm
 
 RUN git clone https://github.com/mattermost/focalboard.git
 WORKDIR ./focalboard
-RUN make prebuild
-RUN make server-linux-package
+#RUN make prebuild
+#RUN make server-linux-package
 
 ENTRYPOINT ["sleep", "infinity"]
 
