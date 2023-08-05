@@ -16,12 +16,12 @@ apply_template:
 
 .PHONY: up
 up:
-	sudo docker-compose up -d
+	sudo docker compose up -d
 
 .PHONY: down
 down:
-	sudo docker-compose down
+	sudo docker compose down
 
 .PHONY: console
 console:
-	sudo docker-compose exec focalboard /bin/bash
+	sudo docker compose exec focalboard /bin/bash
