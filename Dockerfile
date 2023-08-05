@@ -1,4 +1,4 @@
-FROM debian:bookworm as base
+FROM arm64v8/debian:latest AS base
 
 FROM base as debug
 ENTRYPOINT ["sleep", "infinity"]
