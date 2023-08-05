@@ -4,7 +4,7 @@ REPLACEMENT_TEMPLATE := $(foreach var,$(VAR_LIST),s~__$(var)__~$($(var))~g;)
 
 .PHONY: build-release
 build-release: apply_template
-	sudo docker build -t $(IMAGE_NAME) --target release .
+	sudo docker build -t $(IMAGE_NAME) --target release --network host .
 
 .PHONY: build-debug
 build-debug: apply_template
