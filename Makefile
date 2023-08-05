@@ -1,3 +1,5 @@
+IMAGE_NAME := focalboard
+
 .PHONY: build-release
 build-release:
 	sudo docker build -t $(IMAGE_NAME) --target release --network host .
