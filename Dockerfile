@@ -1,4 +1,9 @@
-FROM debian:bookworm
+FROM debian:bookworm as base
+
+FROM base as debug
+ENTRYPOINT ["sleep", "infinity"]
+
+FROM base as release
 
 RUN apt-get update
 RUN apt-get install -y wget
