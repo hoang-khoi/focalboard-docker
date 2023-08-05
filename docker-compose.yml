@@ -1,0 +1,8 @@
+# For development and reference only.
+services:
+  focalboard:
+    image: focalboard:latest
+    ports:
+      - 8001:8000
+    volumes:
+        - ./data:/opt/focalboard/data
