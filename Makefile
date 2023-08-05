@@ -6,7 +6,7 @@ build-release:
 
 .PHONY: build-debug
 build-debug:
-	sudo docker build -t $(IMAGE_NAME) --target debug .
+	sudo docker build -t $(IMAGE_NAME) --target debug --network host .
 
 .PHONY: up
 up:
